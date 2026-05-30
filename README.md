@@ -1,5 +1,7 @@
 <a href="https://livekit.io/">
   <img src="./.github/assets/livekit-mark.png" alt="LiveKit logo" width="100" height="100">
+  <img width="1414" height="687" alt="Screenshot 2026-05-30 at 2 45 07 PM" src="https://github.com/user-attachments/assets/a79b7775-1a4a-49ec-91a4-22a68a4d90e8" />
+
 </a>
 
 # LiveKit Agents Starter - Python
