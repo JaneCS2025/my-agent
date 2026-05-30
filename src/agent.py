@@ -110,12 +110,12 @@ async def my_agent(ctx: JobContext):
     session = AgentSession(
         # Speech-to-text (STT) is your agent's ears, turning the user's speech into text that the LLM can understand
         # See all available models at https://docs.livekit.io/agents/models/stt/
-        llm=openai.realtime.RealtimeModel(modalities=["text"]),
-        stt=inference.STT(model="deepgram/nova-3", language="multi"),
+        llm=openai.realtime.RealtimeModel(voice="coral"),
+        stt=inference.STT(model="deepgram/nova-3", language="en"),
         # Text-to-speech (TTS) is your agent's voice, turning the LLM's text into speech that the user can hear
         # See all available models as well as voice selections at https://docs.livekit.io/agents/models/tts/
         tts=inference.TTS(
-            model="cartesia/sonic-3", voice="16212f18-4955-4be9-a6cd-2196ce2c11d1"
+            model="cartesia/sonic-3", voice="7a5d4663-88ae-47b7-808e-8f9b9ee4127b"
         ),
         # VAD is used to determine when the user is speaking
         # See more at https://docs.livekit.io/agents/build/turns
@@ -151,6 +151,11 @@ async def my_agent(ctx: JobContext):
 
     # Join the room and connect to the user
     await ctx.connect()
+    # await session.generate_reply(
+    #     instructions="Greet the user and offer your assistance. You should start by speaking in English. Tell user your name is vivian."
+    # )
+    
+   
 
 
 if __name__ == "__main__":

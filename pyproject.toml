@@ -12,6 +12,7 @@ dependencies = [
     "livekit-agents[openai,silero,turn-detector]==1.5.12",
     "livekit-plugins-ai-coustics~=0.2",
     "python-dotenv",
+    "streamlit>=1.58.0",
 ]
 
 [dependency-groups]
